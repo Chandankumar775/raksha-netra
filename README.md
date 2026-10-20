@@ -1,10 +1,10 @@
 <div align="center">
 
-# Raksha Netra (WatchTower)
+<img src="docs/brand/wordmark.webp" alt="Raksha Netra (WatchTower)" width="100%">
 
 **A cyber incident reporting portal for defence personnel. Report a suspicious link, message or file; get an AI risk analysis; let CERT analysts triage it.**
 
-Smart India Hackathon 2025
+[Live demo](https://raksha-netra-portal.vercel.app) · Smart India Hackathon 2025
 
 <img src="docs/screenshots/home.webp" alt="Raksha Netra home: Cyber Security Portal, Ministry of Defence" width="100%">
 
@@ -71,12 +71,15 @@ Requires Node 20+ and Python 3.10+. On Windows, `SETUP.ps1` installs everything 
 # backend
 cd backend
 pip install -r requirements.txt
+cp .env.example .env      # add your GOOGLE_API_KEY, VIRUSTOTAL_API_KEY and a JWT secret
 python server.py
 
 # frontend (new terminal, repo root)
 npm install --legacy-peer-deps
 npm run dev
 ```
+
+The hosted demo runs the frontend only; without a backend, sign-in falls back to the demo accounts. Set `VITE_API_URL` to point the frontend at your backend.
 
 Demo accounts (password `demo123`): `reporter@army.mil` (reporter) and `admin@rakshanetra.mil` (admin). Full guide: [SETUP_GUIDE.md](SETUP_GUIDE.md).
 
@@ -87,4 +90,4 @@ Demo accounts (password `demo123`): `reporter@army.mil` (reporter) and `admin@ra
 
 ## Team
 
-Built for SIH 2025 with [euphoric-habromaniac](https://github.com/euphoric-habromaniac). An earlier version of the portal is [watchtower-sentinel](https://github.com/Chandankumar775/watchtower-sentinel).
+Built for SIH 2025 with [euphoric-habromaniac](https://github.com/euphoric-habromaniac). An earlier version of the portal is [watchtower-sentinel](https://github.com/Chandankumar775/watchtower-cyber-portal).
