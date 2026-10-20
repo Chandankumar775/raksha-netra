@@ -1,7 +1,7 @@
 {
   "incident_id": "INC-251209-08E548",
   "type": "url",
-  "content": "https://github.com/Chandankumar775/sih-2025",
+  "content": "https://github.com/chandan-kumar-git/raksha-netra",
   "description": null,
   "location": null,
   "unit_name": null,
@@ -10,7 +10,7 @@
   "status": "pending",
   "indicators": [
     "✓ Domain exists (IP: 20.207.73.82)",
-    "🔗 URLs found: https://github.com/Chandankumar775/sih-2025",
+    "🔗 URLs found: https://github.com/chandan-kumar-git/raksha-netra",
     "Pattern-based analysis completed",
     "Suspicious content structure detected",
     "Manual review recommended"
@@ -38,7 +38,7 @@
     "detailed_description": "This url has been analyzed using our advanced rule-based threat detection engine. \n\nThe content exhibits multiple characteristics commonly associated with spam attacks. With a risk score of 45/100, this falls into the medium severity category. Our analysis has identified 0 specific threat indicators that warrant immediate attention.\n\nFor defence personnel, this type of content is particularly concerning as it may be part of a targeted social engineering campaign. The use of urgency tactics and requests for action are classic hallmarks of cyber attacks designed to bypass critical thinking and exploit trust. We strongly recommend following all security protocols and reporting this to your IT security team immediately.",
     "indicators": [
       "✓ Domain exists (IP: 20.207.73.82)",
-      "🔗 URLs found: https://github.com/Chandankumar775/sih-2025",
+      "🔗 URLs found: https://github.com/chandan-kumar-git/raksha-netra",
       "Pattern-based analysis completed",
       "Suspicious content structure detected",
       "Manual review recommended"
@@ -64,7 +64,7 @@
         "phone_numbers": [],
         "emails": [],
         "urls": [
-          "https://github.com/Chandankumar775/sih-2025"
+          "https://github.com/chandan-kumar-git/raksha-netra"
         ],
         "bank_names": [],
         "army_ranks": [],

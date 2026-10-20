@@ -57,7 +57,7 @@ This is the **fastest and easiest** way to set up everything:
 
 ```powershell
 # Clone the repository
-git clone https://github.com/Chandankumar775/sih-2025.git
+git clone https://github.com/chandan-kumar-git/raksha-netra.git
 
 # Navigate to project directory
 cd sih-2025

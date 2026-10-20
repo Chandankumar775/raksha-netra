@@ -90,4 +90,4 @@ Demo accounts (password `demo123`): `reporter@army.mil` (reporter) and `admin@ra
 
 ## Team
 
-Built for SIH 2025 with [euphoric-habromaniac](https://github.com/euphoric-habromaniac). An earlier version of the portal is [watchtower-sentinel](https://github.com/Chandankumar775/watchtower-cyber-portal).
+Built for SIH 2025 with [euphoric-habromaniac](https://github.com/euphoric-habromaniac). An earlier version of the portal is [watchtower-sentinel](https://github.com/chandan-kumar-git/watchtower-cyber-portal).
