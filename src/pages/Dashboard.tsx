@@ -6,7 +6,7 @@ import { useAuth } from "@/hooks/useAuth";
 import axios from "axios";
 import { useTranslation } from "react-i18next";
 
-const API_BASE_URL = "http://localhost:8000";
+import { API_BASE_URL } from "@/utils/constants";
 
 interface Incident {
   id: string;

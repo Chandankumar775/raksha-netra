@@ -4,6 +4,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { User, AuthState, getStoredAuth, setAuth, clearAuth } from "@/services/auth";
+import { API_BASE_URL } from "@/utils/constants";
 
 // Demo users for hackathon demonstration
 const DEMO_USERS: Record<string, { password: string; user: User }> = {
@@ -32,14 +33,27 @@ export const useAuth = () => {
     setError(null);
 
     try {
-      // Call REAL backend API
-      const response = await fetch('http://localhost:8000/api/auth/login', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email, password }),
-      });
+      let response: Response;
+      try {
+        response = await fetch(`${API_BASE_URL}/api/auth/login`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ email, password }),
+        });
+      } catch {
+        // Backend unreachable (e.g. the hosted demo): fall back to the demo accounts
+        const demo = DEMO_USERS[email.toLowerCase()];
+        if (!demo || demo.password !== password) {
+          throw new Error("Backend offline. Use a demo account to sign in.");
+        }
+        const token = `demo-${demo.user.id}`;
+        setAuth(token, demo.user);
+        setAuthState({ user: demo.user, token, isAuthenticated: true });
+        setLoading(false);
+        return { success: true };
+      }
 
       if (!response.ok) {
         const errorData = await response.json().catch(() => ({ detail: 'Login failed' }));
