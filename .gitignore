@@ -12,3 +12,6 @@ venv/
 
 .vercel
 .env*
+*.db
+*.db.backup*
+backend/reports/

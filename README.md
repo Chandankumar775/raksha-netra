@@ -72,6 +72,7 @@ Requires Node 20+ and Python 3.10+. On Windows, `SETUP.ps1` installs everything 
 cd backend
 pip install -r requirements.txt
 cp .env.example .env      # add your GOOGLE_API_KEY, VIRUSTOTAL_API_KEY and a JWT secret
+python create_demo_users.py   # creates the local SQLite databases and demo accounts
 python server.py
 
 # frontend (new terminal, repo root)
