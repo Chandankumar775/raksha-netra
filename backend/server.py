@@ -60,7 +60,12 @@ except ImportError:
     print("⚠️  auth_manager not available")
 
 # ==================== GEMINI AI CONFIG ====================
-GEMINI_API_KEY = "***REMOVED***"
+try:
+    from dotenv import load_dotenv
+    load_dotenv(Path(__file__).with_name(".env"))
+except ImportError:
+    pass
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY") or os.getenv("GOOGLE_API_KEY", "")
 GEMINI_MODEL = "gemini-2.5-flash"  # Latest fast model with new API
 
 
